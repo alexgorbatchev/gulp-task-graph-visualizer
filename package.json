@@ -1,6 +1,6 @@
 {
   "name": "gulp-task-graph-visualizer",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Prints out Gulp.js tasks graph tree",
   "main": "index.js",
   "files": [
