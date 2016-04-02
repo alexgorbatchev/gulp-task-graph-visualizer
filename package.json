@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Prints out Gulp.js tasks graph tree",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "prepublish": "babel --source-maps=inline index-es6.js > index.js"
   },
