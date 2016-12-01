@@ -9,7 +9,7 @@ Gulp.js plugin to visualize task dependency graph within your gulpfile.
 ## Installation
 
 ```
-npm instal --save-dev gulp-task-graph-visualizer
+npm install --save-dev gulp-task-graph-visualizer
 ```
 
 ## Usage
