@@ -19,9 +19,14 @@ module.exports = (task) => {
     const sortNodes = nodes => {
       nodes.sort(sortByLabel);
       nodes.forEach(({nodes}) => sortNodes(nodes));
-    }
+    };
 
-    sortNodes(tree.nodes);
-    console.log(archy(nodesList[task] || tree));
+    try {
+      sortNodes(tree.nodes);
+	  console.log(archy(nodesList[task] || tree));
+    }
+    catch (e) {
+      throw new TypeError('There is a cyclic dependency in the tasks tree');
+    }
   };
-}
+};

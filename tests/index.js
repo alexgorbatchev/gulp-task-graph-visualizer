@@ -47,6 +47,25 @@ describe('gulp-task-graph-visualizer', function() {
 			"│ └── e",
 			"└── e",
 			""
-		].join("\n"))
+		].join("\n"));
+		
+		//Release
+		console.log = real_console_log;
 	});
+	
+	it('should show an error if cyclic dependencies are found', function() {
+		//Prepare
+		const tasks = {
+			a: { name: 'a', dep: [ 'b' ], },
+			b: { name: 'b', dep: [ 'a' ], },
+		};
+		
+		//Execute
+		var output = () => viz().call({ tasks });
+		
+		//Verify
+		expect(output).to.throw(TypeError, /cyclic dependenc(y|ies)/);
+	});
+	
+	
 });
