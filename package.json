@@ -6,8 +6,12 @@
   "files": [
     "index.js"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexgorbatchev/gulp-task-graph-visualizer.git"
+  },
   "scripts": {
-    "prepublish": "babel --source-maps=inline index-es6.js > index.js"
+    "prepublish": "`npm bin`/babel --source-maps=inline index-es6.js > index.js"
   },
   "keywords": [
     "gulpplugin",
@@ -19,13 +23,17 @@
   ],
   "author": "Alex Gorbatchev",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexgorbatchev/gulp-task-graph-visualizer/issues"
+  },
+  "homepage": "https://github.com/alexgorbatchev/gulp-task-graph-visualizer#readme",
   "devDependencies": {
     "babel-cli": "^6.6.5",
     "babel-core": "^6.7.4",
-    "babel-preset-es2015": "^6.6.0"
+    "babel-preset-es2015": "^6.6.0",
+    "gulp": "^3.9.1"
   },
   "dependencies": {
-    "archy": "^1.0.0",
-    "gulp": "^3.9.1"
+    "archy": "^1.0.0"
   }
 }
